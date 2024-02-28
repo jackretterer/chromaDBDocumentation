@@ -1,8 +1,9 @@
 ---
 sidebar_position: 15
+title: "🤝 About"
 ---
 
-# 👽 About
+# 🤝 About
 
 ## Who we are
 

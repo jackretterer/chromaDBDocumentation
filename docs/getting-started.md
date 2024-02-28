@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-Chroma is a database for building AI applications with embeddings. It comes with everything you need to get started built in, and runs on your machine. A [hosted version](https://airtable.com/shrOAiDUtS2ILy5vZ) is coming soon!
+[REWRITE] Chroma is a database for building AI applications with embeddings. It comes with everything you need to get started built in, and runs on your machine. A [hosted version](https://airtable.com/shrOAiDUtS2ILy5vZ) is coming soon!
 
 ### 1. Install
 
@@ -25,7 +25,7 @@ Chroma is a database for building AI applications with embeddings. It comes with
 <TabItem value="py" label="Python">
 
 ```py
-pip install chromadb
+pip install chromadb # in shell
 ```
 
 </TabItem>
@@ -98,10 +98,6 @@ collection = chroma_client.create_collection(name="my_collection")
 
 For this example, we want to generate embeddings from text. OpenAI's `ada-002` model is popular, free, and a quick [signup](https://openai.com/api/). Grab your API key and come back. Chroma's API is polymorphic (it can run in the browser or server-side), but OpenAIs is not. So run this example server-side.
 
-:::caution
-Please take steps to secure your API when interacting with frontend systems.
-:::
-
 ```js
 // CJS
 const { OpenAIEmbeddingFunction } = require("chromadb");
@@ -127,7 +123,7 @@ const collection = await client.createCollection({
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">
 
-Chroma will store your text, and handle tokenization, embedding, and indexing automatically.
+Chroma will store your text, and handle embedding, and [indexing](./concepts/indexes.md) automatically.
 
 ```python
 collection.add(
@@ -140,7 +136,7 @@ collection.add(
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-Chroma will store your text, and handle tokenization, embedding, and indexing automatically.
+Chroma will store your text, and handle embedding, and [indexing](./concepts/indexes.md) automatically.
 
 ```js
 await collection.add({
@@ -226,8 +222,3 @@ Find [chromadb on npm](https://www.npmjs.com/package/chromadb).
 - Chroma is designed to be simple enough to get started with quickly and flexible enough to meet many use-cases. You can use your own embedding models, query Chroma with your own embeddings, and filter on metadata. To learn more about Chroma, check out the [Usage Guide](./usage-guide.md) and [API Reference](./api-reference.md).
 - Chroma is integrated in [LangChain](https://python.langchain.com/en/latest/modules/indexes/vectorstores.html?highlight=chroma#langchain.vectorstores.Chroma) (`python` and `js`), making it easy to build AI applications with Chroma. Check out the [integrations](./integrations) page to learn more.
 - You can [deploy a persistent instance](./deployment) of Chroma to an external server, to make it easier to work on larger projects or with a team.
-
-## Coming Soon
-
-- A hosted version of Chroma, with an easy to use web UI and API
-- Multiple datatypes, including images, audio, video, and more

@@ -1,6 +1,6 @@
 ---
 slug: /integrations/braintrust
-title: Braintrust
+title: 🧠 Braintrust
 ---
 
 [Braintrust](https://www.braintrustdata.com/) is an enterprise-grade stack for building AI products including: evaluations, prompt playground, dataset management, tracing, etc.

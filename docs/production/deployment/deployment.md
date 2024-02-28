@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-title: "☁️ Deployment"
+title: "🚀 Deployment"
 ---
 
 :::caution Alpha Status
