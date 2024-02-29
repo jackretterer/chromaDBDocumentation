@@ -2,10 +2,6 @@
 title: 🗺️ Deleting Data in Collections
 ---
 
-Chroma supports deleting items from a collection by `id` using `.delete`. The embeddings, documents, and metadata associated with each item will be deleted.
-⚠️ Naturally, this is a destructive operation, and cannot be undone.
-
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -15,6 +11,10 @@ import TabItem from '@theme/TabItem';
 <TabItem value="py" label="Python"></TabItem>
 <TabItem value="js" label="JavaScript"></TabItem>
 </Tabs>
+
+
+Chroma supports deleting items from a collection by `id` using `.delete`. The embeddings, documents, and metadata associated with each item will be deleted.
+⚠️ Naturally, this is a destructive operation, and cannot be undone.
 
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">

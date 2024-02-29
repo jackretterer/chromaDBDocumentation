@@ -85,7 +85,7 @@ const sidebars = {
     'concepts/index',
     {
       type: 'category',
-      label: 'Concepts',
+      label: 'Main Concepts',
       collapsed: false,
       className: 'category-header',
       items: [
@@ -99,30 +99,6 @@ const sidebars = {
       ],
     },
   ],
-  embeddings: [
-    {
-      type: 'link',
-      label: '← Concepts',
-      href: '/concepts'  
-    },
-    'concepts/embeddings',
-    {
-      type: 'category',
-      label: 'Embeddings',
-      collapsed: false,
-      className: 'category-header',
-      items: [
-        'concepts/embeddings/openai',
-        'concepts/embeddings/google-gemini',
-        'concepts/embeddings/cohere',
-        'concepts/embeddings/hugging-face',
-        'concepts/embeddings/google-palm',
-        'concepts/embeddings/instructor',
-        'concepts/embeddings/hugging-face-embedding-server',
-        'concepts/embeddings/jinaai',
-      ],
-    },
-  ],
   guides: [
     {
       type: 'link',
@@ -130,8 +106,17 @@ const sidebars = {
       href: '/'  
     },
     'guides/index',
-    'guides/persistent-chroma',
-    'guides/running-chroma',
+    {
+      type: 'category',
+      label: 'Usage Guide',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'guides/persistent-chroma',
+        'guides/running-chroma',
+        'guides/docker',
+      ],
+    },
     {
       type: 'category',
       label: 'Collections',

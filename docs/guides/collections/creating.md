@@ -2,6 +2,18 @@
 title: "📝  Creating Collections"
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<div class="select-language">Select a language</div>
+
+<Tabs queryString groupId="lang">
+<TabItem value="py" label="Python"></TabItem>
+<TabItem value="js" label="JavaScript"></TabItem>
+</Tabs>
+
+---
+
 ## Using collections
 
 Chroma lets you manage collections of embeddings, using the `collection` primitive.

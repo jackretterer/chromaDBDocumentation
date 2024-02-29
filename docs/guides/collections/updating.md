@@ -2,8 +2,6 @@
 title: 🔄 Updating Data in Collections
 ---
 
-Any property of items in a collection can be updated using `.update`.
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -13,6 +11,8 @@ import TabItem from '@theme/TabItem';
 <TabItem value="py" label="Python"></TabItem>
 <TabItem value="js" label="JavaScript"></TabItem>
 </Tabs>
+
+Any property of items in a collection can be updated using `.update`.
 
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">
