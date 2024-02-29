@@ -19,6 +19,8 @@ import TabItem from '@theme/TabItem';
 
 [REWRITE] Chroma is a database for building AI applications with embeddings. It comes with everything you need to get started built in, and runs on your machine. A [hosted version](https://airtable.com/shrOAiDUtS2ILy5vZ) is coming soon!
 
+This getting started guide assumes you understand the basics of retrieval and vector databases, but if you are new to them we'd recommend checking out our main [concepts](./concepts/index.md) for more context.
+
 ### 1. Install
 
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
@@ -28,6 +30,9 @@ import TabItem from '@theme/TabItem';
 pip install chromadb # in shell
 ```
 
+Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
+
+
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
@@ -35,13 +40,17 @@ pip install chromadb # in shell
 npm install --save chromadb # yarn add chromadb
 ```
 
+Find [chromadb on npm](https://www.npmjs.com/package/chromadb).
+
 You will need to install the Chroma python package to use the Chroma CLI and backend server.
 
 ```sh
 pip install chromadb
 ```
 
-Alternatively, you can use a Docker container to run the Chroma backend server.
+Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
+
+Alternatively, you can use a Docker container to run the Chroma backend server. Follow this guide [ CREATE GUIDE ].
 
 </TabItem>
 
@@ -96,7 +105,7 @@ collection = chroma_client.create_collection(name="my_collection")
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
-For this example, we want to generate embeddings from text. OpenAI's `ada-002` model is popular, free, and a quick [signup](https://openai.com/api/). Grab your API key and come back. Chroma's API is polymorphic (it can run in the browser or server-side), but OpenAIs is not. So run this example server-side.
+For this example, we want to generate embeddings from text. OpenAI's `ada-002` model is popular, and a quick [signup](https://openai.com/api/). Grab your API key and come back!
 
 ```js
 // CJS
@@ -128,7 +137,6 @@ Chroma will store your text, and handle embedding, and [indexing](./concepts/ind
 ```python
 collection.add(
     documents=["This is a document", "This is another document"],
-    metadatas=[{"source": "my_source"}, {"source": "my_source"}],
     ids=["id1", "id2"]
 )
 ```
@@ -150,38 +158,6 @@ await collection.add({
 
 </Tabs>
 
-If you have already generated embeddings yourself, you can load them directly in:
-
-<Tabs queryString groupId="lang" className="hideTabSwitcher">
-<TabItem value="py" label="Python">
-
-```python
-collection.add(
-    embeddings=[[1.2, 2.3, 4.5], [6.7, 8.2, 9.2]],
-    documents=["This is a document", "This is another document"],
-    metadatas=[{"source": "my_source"}, {"source": "my_source"}],
-    ids=["id1", "id2"]
-)
-```
-
-</TabItem>
-<TabItem value="js" label="JavaScript">
-
-```js
-await collection.add({
-  ids: ["id1", "id2"],
-  embeddings: [
-    [1.2, 2.3, 4.5],
-    [6.7, 8.2, 9.2],
-  ],
-  metadatas: [{ source: "my_source" }, { source: "my_source" }],
-  documents: ["This is a document", "This is another document"],
-});
-```
-
-</TabItem>
-
-</Tabs>
 
 ### 5. Query the collection
 
@@ -197,9 +173,33 @@ results = collection.query(
 )
 ```
 
-By default data stored in Chroma is ephemeral making it easy to prototype scripts. It's easy to make Chroma persistent so you can reuse every collection you create and add more documents to it later. It will load your data automatically when you start the client, and save it automatically when you close it. Check out the [Usage Guide](./usage-guide.md) for more info.
+</TabItem>
+<TabItem value="js" label="JavaScript">
 
-Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
+```js
+const results = await collection.query({
+  nResults: 2,
+  queryTexts: ["This is a query document"],
+});
+```
+
+</TabItem>
+
+</Tabs>
+
+### 6. View Results
+
+Now you can view the results to get an understanding of the return types.
+
+<Tabs queryString groupId="lang" className="hideTabSwitcher">
+<TabItem value="py" label="Python">
+
+```python
+results = collection.query(
+    query_texts=["This is a query document"],
+    n_results=2
+)
+```
 
 </TabItem>
 <TabItem value="js" label="JavaScript">
@@ -211,14 +211,15 @@ const results = await collection.query({
 });
 ```
 
-Find [chromadb on npm](https://www.npmjs.com/package/chromadb).
-
 </TabItem>
 
 </Tabs>
 
+Note: By default data stored in Chroma is ephemeral (temporary) making it easy to prototype scripts. However, if you'd like to make your data persistent, you can checkout the [Usage Guide](./usage-guide.md) for more info.
+
 ## 📚 Next steps
 
-- Chroma is designed to be simple enough to get started with quickly and flexible enough to meet many use-cases. You can use your own embedding models, query Chroma with your own embeddings, and filter on metadata. To learn more about Chroma, check out the [Usage Guide](./usage-guide.md) and [API Reference](./api-reference.md).
-- Chroma is integrated in [LangChain](https://python.langchain.com/en/latest/modules/indexes/vectorstores.html?highlight=chroma#langchain.vectorstores.Chroma) (`python` and `js`), making it easy to build AI applications with Chroma. Check out the [integrations](./integrations) page to learn more.
+- Chroma is designed to be simple enough to get started with quickly and flexible enough to meet many use-cases. Checkout the following examples for a quick [end-to-end example](./examples/index.md).
+- You can use your own embedding models, query Chroma with your own embeddings, and filter on metadata. To learn more about Chroma, check out the [Main Concepts](./concepts/index.md), [Usage Guide](./guides/index.md) and [API Reference](./api-reference.md).
+- Chroma integrates with a host of services and libraries making it very easy to build AI applications. Check out the [integrations](./integrations) page to learn more.
 - You can [deploy a persistent instance](./deployment) of Chroma to an external server, to make it easier to work on larger projects or with a team.

@@ -25,76 +25,12 @@ const sidebars = {
     'guides/index',
     'integrations/index',
     'production/index',
-    // {
-    //   type: 'link',
-    //   href: '/examples',
-    //   label: '🧬 Examples',
-    //   className: 'category-link',
-    // },
-    // {
-    //   type: 'link',
-    //   href: '/concepts',
-    //   label: '💡 Concepts',
-    //   className: 'category-link',
-    // },
-    // {
-    //   type: 'link',
-    //   href: '/guides',
-    //   label: '🗺️ Guides',
-    //   className: 'category-link',
-    // },
-    // {
-    //   type: 'link',
-    //   href: '/integrations',
-    //   label: '🔗 Integrations',
-    //   className: 'category-link',
-    // },
-    // {
-    //   type: 'link',
-    //   href: '/production',
-    //   label: '🌐 Production',
-    //   className: 'category-link',
-    // },
     'telemetry',
     'roadmap',
     'contributing',
     'troubleshooting',
     'about',
     'reference/index',
-    // {
-    //   type: 'link',
-    //   href: '/about',
-    //   label: '🤝 About',
-    //   className: 'category-link',
-    // },
-    // {
-    //   type: 'link',
-    //   href: '/reference',
-    //   label: '🔧 Reference',
-    //   className: 'category-link',
-    // },
-  ],
-  integrations: [
-    {
-      type: 'link',
-      label: '← Home',
-      href: '/'  
-    },
-    'integrations/index',
-    {
-      type: 'category',
-      label: 'Integrations',
-      collapsed: false,
-      className: 'category-header',
-      items: [
-        'integrations/langchain',
-        'integrations/llama-index',
-        'integrations/braintrust',
-        'integrations/openllmetry',
-        'integrations/streamlit',
-        'integrations/haystack',
-      ],
-    },
   ],
   examples: [
     {
@@ -109,11 +45,22 @@ const sidebars = {
       collapsed: false,
       className: 'category-header',
       items: [
-        'examples/example-text',
-        'examples/example-pdfs',
-        'examples/example-images',
-        'examples/example-audio',
-        'examples/example-video',
+        'examples/data-type/example-text',
+        'examples/data-type/example-pdfs',
+        'examples/data-type/example-images',
+        'examples/data-type/example-audio',
+        'examples/data-type/example-video',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Use Cases',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'examples/use-cases/image-search',
+        'examples/use-cases/question-answering',
+        'examples/use-cases/summarization',
       ],
     },
     {
@@ -142,13 +89,9 @@ const sidebars = {
       collapsed: false,
       className: 'category-header',
       items: [
-        {
-          type: 'link',
-          href: '/concepts/embeddings',
-          label: '🧬 Embeddings',
-          className: 'category-link',
-        },
+        'concepts/embeddings',
         'concepts/vector-search',
+        'concepts/distance-functions',
         'concepts/indexes',
         'concepts/metadata',
         'concepts/clients',
@@ -159,8 +102,8 @@ const sidebars = {
   embeddings: [
     {
       type: 'link',
-      label: '← Home',
-      href: '/'  
+      label: '← Concepts',
+      href: '/concepts'  
     },
     'concepts/embeddings',
     {
@@ -187,13 +130,43 @@ const sidebars = {
       href: '/'  
     },
     'guides/index',
+    'guides/persistent-chroma',
+    'guides/running-chroma',
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Collections',
       collapsed: false,
       className: 'category-header',
       items: [
-        'guides/Introduction',
+        'guides/collections/creating',
+        'guides/collections/data-addition',
+        'guides/collections/updating',
+        'guides/collections/deleting',
+        'guides/collections/querying',
+        'guides/collections/distance-function',
+        'guides/collections/where-filters',
+      ],
+    },
+  ],
+  integrations: [
+    {
+      type: 'link',
+      label: '← Home',
+      href: '/'  
+    },
+    'integrations/index',
+    {
+      type: 'category',
+      label: 'Integrations',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'integrations/langchain',
+        'integrations/llama-index',
+        'integrations/braintrust',
+        'integrations/openllmetry',
+        'integrations/streamlit',
+        'integrations/haystack',
       ],
     },
   ],
@@ -210,12 +183,7 @@ const sidebars = {
       collapsed: false,
       className: 'category-header',
       items: [
-        {
-          type: 'link',
-          href: '/production/deployment',
-          label: '🚀 Deployment',
-          className: 'category-link',
-        },
+        'production/deployment/index',
         'production/observability',
         'production/performance',
         'production/authentication',
@@ -224,6 +192,24 @@ const sidebars = {
         'production/administration',
         'production/migration',
         'production/restore',
+      ],
+    },
+  ],
+  deployment: [
+    {
+      type: 'link',
+      label: '← Production',
+      href: '/'  
+    },
+    'production/deployment/index',
+    {
+      type: 'category',
+      label: 'Deployment',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'production/deployment/deployment-gcp',
+        'production/deployment/deployment-aws',
       ],
     },
   ],
