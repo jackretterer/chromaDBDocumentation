@@ -5,10 +5,6 @@ title: "📖 API Cheatsheet"
 
 # 📖 API Cheatsheet
 
-:::note
-This is a quick cheatsheet of the API. For full API docs, refer to the JS and Python docs in the sidebar.
-:::
-
 ---
 
 import Tabs from '@theme/Tabs';

@@ -14,6 +14,10 @@ import TabItem from '@theme/TabItem';
 
 ---
 
+:::note Connecting to the backend
+To connect with the JS client, you must connect to a backend running Chroma. See [Running Chroma in client/server mode](running-chroma.md) for how to do this.
+:::
+
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">
 
@@ -38,14 +42,9 @@ const { ChromaClient } = require("chromadb");
 
 // ESM
 import { ChromaClient } from 'chromadb'
-```
 
-:::note Connecting to the backend
-To connect with the JS client, you must connect to a backend running Chroma. See `Running Chroma in client/server mode` for how to do this.
-:::
-
-```js
 const client = new ChromaClient();
+
 ```
 
 </TabItem>
@@ -68,7 +67,9 @@ client.reset() # Empties and completely resets the database. ⚠️ This is dest
 The client object has a few useful convenience methods.
 
 ```javascript
-await client.reset() # Empties and completely resets the database. ⚠️ This is destructive and not reversible.
+# Empties and completely resets the database. 
+# ⚠️ This is destructive and not reversible.
+await client.reset() 
 ```
 
 </TabItem>

@@ -31,3 +31,5 @@ npm install --save chromadb # yarn add chromadb
 
 </TabItem>
 </Tabs>
+
+For a full guide on multi-modality check out the following [page](../../guides/multi-modal.md).

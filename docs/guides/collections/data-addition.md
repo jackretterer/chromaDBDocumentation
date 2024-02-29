@@ -38,11 +38,6 @@ await collection.add({
     metadatas: [{"chapter": "3", "verse": "16"}, {"chapter": "3", "verse": "5"}, {"chapter": "29", "verse": "11"}, ...],
     documents: ["lorem ipsum...", "doc2", "doc3", ...],
 })
-// input order
-// ids - required
-// embeddings - optional
-// metadata - optional
-// documents - optional
 ```
 
 </TabItem>

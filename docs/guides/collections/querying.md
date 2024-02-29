@@ -39,11 +39,6 @@ const result = await collection.query({
     nResults: 10,
     where: {"metadata_field": "is_equal_to_this"},
 })
-// input order
-// query_embeddings - optional
-// n_results - required
-// where - optional
-// query_texts - optional
 ```
 
 </TabItem>

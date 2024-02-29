@@ -106,6 +106,7 @@ const sidebars = {
       href: '/'  
     },
     'guides/index',
+    'guides/embeddings/index',
     {
       type: 'category',
       label: 'Usage Guide',
@@ -115,6 +116,15 @@ const sidebars = {
         'guides/persistent-chroma',
         'guides/running-chroma',
         'guides/docker',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Use Cases',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'guides/multi-modal',
       ],
     },
     {
@@ -142,6 +152,30 @@ const sidebars = {
         'guides/collections/querying',
         'guides/collections/distance-function',
         'guides/collections/filtering',
+      ],
+    },
+  ],
+  embeddings: [
+    {
+      type: 'link',
+      label: '← Guides',
+      href: '/guides'  
+    },
+    'guides/embeddings/index',
+    {
+      type: 'category',
+      label: 'Embedding Options',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'guides/embeddings/cohere',
+        'guides/embeddings/google-gemini',
+        'guides/embeddings/google-palm',
+        'guides/embeddings/hugging-face-embedding-server',
+        'guides/embeddings/hugging-face',
+        'guides/embeddings/instructor',
+        'guides/embeddings/jinaai',
+        'guides/embeddings/openai',
       ],
     },
   ],

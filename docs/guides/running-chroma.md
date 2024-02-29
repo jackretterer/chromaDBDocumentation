@@ -32,7 +32,7 @@ import chromadb
 chroma_client = chromadb.HttpClient(host='localhost', port=8000)
 ```
 
-That's it! Chroma's API will run in `client-server` mode with just this change.
+That's it! Chroma's API will run in `client-server` mode with just this change. If you are interested in getting Chroma to production check out our [Production section](../production/index.md)
 
 <!-- #### Run Chroma inside your application
 
