@@ -1,5 +1,5 @@
 ---
-title: 🗺️ Deleting Data in Collections
+title: 🗺️ Deleting Data
 ---
 
 import Tabs from '@theme/Tabs';

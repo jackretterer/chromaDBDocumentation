@@ -1,7 +1,5 @@
 ---
-sidebar_label: Client
-title: Client
-sidebar_position: 1
+title: Python Client
 ---
 
 

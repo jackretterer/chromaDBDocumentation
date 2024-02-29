@@ -1,7 +1,5 @@
 ---
-sidebar_label: Collection
-title: Collection
-sidebar_position: 2
+title: Python Collection
 ---
 
 # Collection Objects

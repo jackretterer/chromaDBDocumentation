@@ -91,9 +91,9 @@ const sidebars = {
       items: [
         'concepts/embeddings',
         'concepts/vector-search',
-        'concepts/distance-functions',
-        'concepts/indexes',
         'concepts/metadata',
+        'concepts/indexes',
+        'concepts/distance-functions',
         'concepts/clients',
         'concepts/collections',
       ],
@@ -119,6 +119,17 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Metadata',
+      collapsed: false,
+      className: 'category-header',
+      items: [
+        'guides/metadata/keyword-search',
+        'guides/metadata/additional-information',
+        'guides/metadata/filter',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Collections',
       collapsed: false,
       className: 'category-header',
@@ -126,10 +137,11 @@ const sidebars = {
         'guides/collections/creating',
         'guides/collections/data-addition',
         'guides/collections/updating',
+        'guides/collections/upserting',
         'guides/collections/deleting',
         'guides/collections/querying',
         'guides/collections/distance-function',
-        'guides/collections/where-filters',
+        'guides/collections/filtering',
       ],
     },
   ],
@@ -184,7 +196,7 @@ const sidebars = {
     {
       type: 'link',
       label: '← Production',
-      href: '/'  
+      href: '/production'  
     },
     'production/deployment/index',
     {
@@ -198,21 +210,22 @@ const sidebars = {
       ],
     },
   ],
-  api: [
+  reference: [
     {
       type: 'link',
       label: '← Home',
       href: '/'  
     },
-    'api/index',
+    'reference/index',
+    'reference/api-reference',
     {
       type: 'category',
       label: 'Python Client',
       collapsed: false,
       className: 'category-header',
       items: [
-        'reference/Client',
-        'reference/Collection',
+        'reference/python-client/client',
+        'reference/python-client/collection',
       ],
     },
     {
@@ -221,8 +234,8 @@ const sidebars = {
       collapsed: false,
       className: 'category-header',
       items: [
-        'js_reference/Client',
-        'js_reference/Collection',
+        'reference/js-ts-client/client',
+        'reference/js-ts-client/collection'
       ],
     },
   ],

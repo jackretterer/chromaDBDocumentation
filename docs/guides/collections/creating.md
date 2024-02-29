@@ -85,9 +85,14 @@ You can learn more about [🧬 embedding functions](./embeddings.md), and how to
 Existing collections can be retrieved by name with `.get_collection`, and deleted with `.delete_collection`. You can also use `.get_or_create_collection` to get a collection if it exists, or create it if it doesn't.
 
 ```python
-collection = client.get_collection(name="test") # Get a collection object from an existing collection, by name. Will raise an exception if it's not found.
-collection = client.get_or_create_collection(name="test") # Get a collection object from an existing collection, by name. If it doesn't exist, create it.
-client.delete_collection(name="my_collection") # Delete a collection and all associated embeddings, documents, and metadata. ⚠️ This is destructive and not reversible
+# Get a collection object from an existing collection, by name. Will raise an exception if it's not found.
+collection = client.get_collection(name="test")
+
+# Get a collection object from an existing collection, by name. If it doesn't exist, create it.
+collection = client.get_or_create_collection(name="test")
+
+# Delete a collection and all associated embeddings, documents, and metadata. ⚠️ This is destructive and not reversible.
+client.delete_collection(name="my_collection")
 ```
 
 </TabItem>
@@ -110,9 +115,14 @@ Collections have a few useful convenience methods.
 <TabItem value="py" label="Python">
 
 ```python
-collection.peek() # returns a list of the first 10 items in the collection
-collection.count() # returns the number of items in the collection
-collection.modify(name="new_name") # Rename the collection
+# returns a list of the first 10 items in the collection
+collection.peek()
+
+# returns the number of items in the collection
+collection.count()
+
+# Rename the collection
+collection.modify(name="new_name")
 ```
 
 </TabItem>
