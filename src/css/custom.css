@@ -32,6 +32,17 @@
   border-width: 0px !important;
 }
 
+/* src/css/custom.css */
+.navItem a {
+  /* Your custom styles here */
+  font-weight: bold; /* Example style */
+}
+
+.sidebar-folder-link::after {
+  content: ' →'; /* Adds an arrow to the end of the link text */
+  font-weight: bold;
+}
+
 /* .hiring-link {
   color: #fff;
   background-color: #3c8957;

@@ -25,7 +25,6 @@ This page shows you how to install and get started with the Chroma client.
 <TabItem value="py" label="Python">
 
 ```py
-# run in shell
 pip install chromadb 
 ```
 
@@ -36,12 +35,18 @@ Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
 <TabItem value="js" label="JavaScript">
 
 ```sh
-npm install --save chromadb # yarn add chromadb
+npm install --save chromadb 
 ```
 
-Find [chromadb on npm](https://www.npmjs.com/package/chromadb).
+or 
 
-You will need to install the Chroma python package to use the Chroma CLI and backend server.
+```sh
+yarn add chromadb
+```
+
+Find [chromadb on npm](https://www.npmjs.com/package/chromadb) or [chromadb on yarn](https://classic.yarnpkg.com/en/package/chromadb).
+
+You will also need to install the Chroma python package to use the Chroma CLI and backend server.
 
 ```sh
 pip install chromadb
@@ -49,7 +54,7 @@ pip install chromadb
 
 Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
 
-Alternatively, you can use a Docker container to run the Chroma backend server. Follow this guide [ CREATE GUIDE ].
+Alternatively, you can use a Docker container to run the Chroma backend server. Follow this [guide](./guides/docker.md) for more details.
 
 </TabItem>
 
@@ -77,10 +82,6 @@ chroma run --path /db_path
 Then create a client which connects to it:
 
 ```js
-// CJS
-const { ChromaClient } = require("chromadb");
-
-// ESM
 import { ChromaClient } from 'chromadb'
 
 const client = new ChromaClient();
@@ -107,10 +108,6 @@ collection = chroma_client.create_collection(name="my_collection")
 For this example, we want to generate embeddings from text. OpenAI's `ada-002` model is popular, and a quick [signup](https://openai.com/api/). Grab your API key and come back!
 
 ```js
-// CJS
-const { OpenAIEmbeddingFunction } = require("chromadb");
-
-// ESM
 import { OpenAIEmbeddingFunction } from 'chromadb'
 
 const embedder = new OpenAIEmbeddingFunction({
@@ -188,7 +185,7 @@ const results = await collection.query({
 
 ### 6. View Results
 
-Now you can view the results to get an understanding of the return types.
+You can view the results to get an understanding of the return types.
 
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">
@@ -212,10 +209,18 @@ print(results)
 <TabItem value="js" label="JavaScript">
 
 ```js
-const results = await collection.query({
-  nResults: 2,
-  queryTexts: ["This is a query document"],
-});
+console.log(results) # Need to implement this
+
+# returned output example
+{
+  'ids': [['id1', 'id2']],
+  'distances': [[0.7111214399337769, 1.0109773874282837]],
+  'metadatas': [[None, None]],
+  'embeddings': None,
+  'documents': [['This is a document', 'This is another document']],
+  'uris': None,
+  'data': None
+}
 ```
 
 </TabItem>

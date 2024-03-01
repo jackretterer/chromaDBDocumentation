@@ -70,7 +70,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: '2fd29cf0b4949375eb88d38be2a53b6b',
   
-        indexName: 'YOUR_INDEX_NAME',
+        indexName: 'trychroma',
   
         // Optional: see doc section below
         contextualSearch: true,
@@ -193,6 +193,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      scripts: [
+        {
+          src: './src/js/customizeSidebar.js',
+          async: false,
+        },
+      ],
     }),
 };
 

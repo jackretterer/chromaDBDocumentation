@@ -1,5 +1,5 @@
 ---
-title: 🎨 Examples ->
+title: 🎨 Examples
 ---
 
 This page provides a collection of examples demonstrating how to implement Chroma, along with various applications you can create using the product.

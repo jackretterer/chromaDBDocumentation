@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "📖 API Cheatsheet"
 ---
 
-# 📖 API Cheatsheet
+# 📖 API Cheatsheet - Not probably necessary anymore
 
 ---
 
