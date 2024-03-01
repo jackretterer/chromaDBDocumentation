@@ -19,7 +19,8 @@ import TabItem from '@theme/TabItem';
 ### Installation
 
 ```bash
-pip install chromadb # ran in shell or can be used in notebook with "!"
+# ran in shell or can be used in notebook with a "!"
+pip install chromadb
 ```
 
 ### Import
@@ -35,7 +36,7 @@ chroma_client = chromadb.Client()
 collection = chroma_client.create_collection(name="my_collection")
 ```
 
-For a link to the full code please visit this link.
+For a link to the full code please visit this [link](tbd).
 
 </TabItem>
 <TabItem value="js" label="JavaScript">

@@ -13,21 +13,42 @@ import TabItem from '@theme/TabItem';
 <TabItem value="js" label="JavaScript"></TabItem>
 </Tabs>
 
-### Import
-
 <Tabs queryString groupId="lang" className="hideTabSwitcher">
 <TabItem value="py" label="Python">
 
-```py
+### Installation
+
+```bash
+# ran in shell or can be used in notebook with a "!"
 pip install chromadb
 ```
+
+### Import
+
+```py
+import chromadb
+```
+
+### Getting Started
+
+```py
+chroma_client = chromadb.Client()
+collection = chroma_client.create_collection(name="my_collection")
+```
+
+For a link to the full code please visit this [link](tbd).
 
 </TabItem>
 <TabItem value="js" label="JavaScript">
 
+### Installation
+
 ```sh
-npm install --save chromadb # yarn add chromadb
+npm install --save chromadb # or "yarn add chromadb"
 ```
+
+### Import
+
 
 </TabItem>
 </Tabs>

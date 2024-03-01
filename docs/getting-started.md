@@ -17,9 +17,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-[REWRITE] Chroma is a database for building AI applications with embeddings. It comes with everything you need to get started built in, and runs on your machine. A [hosted version](https://airtable.com/shrOAiDUtS2ILy5vZ) is coming soon!
-
-This getting started guide assumes you understand the basics of retrieval and vector databases, but if you are new to them we'd recommend checking out our main [concepts](./concepts/index.md) for more context.
+This page shows you how to install and get started with the Chroma client.
 
 ### 1. Install
 
@@ -27,7 +25,8 @@ This getting started guide assumes you understand the basics of retrieval and ve
 <TabItem value="py" label="Python">
 
 ```py
-pip install chromadb # in shell
+# run in shell
+pip install chromadb 
 ```
 
 Find [chromadb on PyPI](https://pypi.org/project/chromadb/).
@@ -223,7 +222,7 @@ const results = await collection.query({
 
 </Tabs>
 
-Note: By default data stored in Chroma is ephemeral (temporary) making it easy to prototype scripts. However, if you'd like to make your data persistent, you can checkout the [Usage Guide](./usage-guide.md) for more info.
+Note: By default data stored in Chroma is ephemeral (temporary) making it easy to prototype scripts. However, if you'd like to make your data persistent (permanent), you can checkout the [Usage Guide](./usage-guide.md) for more info.
 
 ## 📚 Next steps
 

@@ -57,8 +57,11 @@ const client = new ChromaClient();
 The client object has a few useful convenience methods.
 
 ```python
-client.heartbeat() # returns a nanosecond heartbeat. Useful for making sure the client remains connected.
-client.reset() # Empties and completely resets the database. ⚠️ This is destructive and not reversible.
+# returns a nanosecond heartbeat. Useful for making sure the client remains connected.
+client.heartbeat() 
+
+# Empties and completely resets the database. ⚠️ This is destructive and not reversible.
+client.reset() 
 ```
 
 </TabItem>

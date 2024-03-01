@@ -7,7 +7,9 @@ hide_title: true
 
 # Chroma
 
-**Chroma is the open-source embedding database**. Chroma makes it easy to build LLM apps by making knowledge, facts, and skills pluggable for LLMs.
+**Chroma is a comprehensive open-source database designed specifically for the development of AI applications utilizing embeddings.** It's fully equipped with all the necessary tools for immediate deployment and operates locally on your machine. Additionally, a cloud-based version will be available shortly.
+
+This introductory guide presumes a foundational knowledge of retrieval processes and vector databases. However, if you're unfamiliar with these concepts, we encourage you to explore our main [concepts](./concepts/index.md) section for a deeper understanding.
 
 <img src="/img/hrm4.svg" />
 
@@ -29,22 +31,10 @@ Chroma consists of a `Python` client SDK, `JavaScript/TypeScript` client SDK and
 
 Chroma is licensed under [Apache 2.0](https://github.com/chroma-core/chroma/blob/main/LICENSE)
 
-Continue with the full [getting started guide](./getting-started.md).
-
-[🔑 Getting started](./getting-started.md)<br/>
-[🧪 Usage Guide](./usage-guide.md)<br/>
-[🧬 Embeddings](./embeddings.md)<br />
-[📄 API Reference](./api-reference.md)<br/>
-[👽 About](./about.md)<br/>
-
-Chroma Community
-
-Discord Community: [![Discord](https://img.shields.io/discord/1073293645303795742)](https://discord.gg/MMeYNTmh3x) <br></br>
-GitHub Adoption: [![GitHub stars](https://img.shields.io/github/stars/chroma-core/chroma.svg?style=social&label=Star&maxAge=2400)](https://GitHub.com/chroma-core/chroma/stargazers/)
-
-[💬 Join Community Discord](https://discord.gg/MMeYNTmh3x) <br/>
-[@trychroma](https://twitter.com/trychroma) 
-
+The Chroma community can be found on the following platforms:
+- Discord Community: [![Discord](https://img.shields.io/discord/1073293645303795742)](https://discord.gg/MMeYNTmh3x) <br></br>
+- GitHub Community: [![GitHub stars](https://img.shields.io/github/stars/chroma-core/chroma.svg?style=social&label=Star&maxAge=2400)](https://GitHub.com/chroma-core/chroma/stargazers/)
+- Twitter Community: [Twitter](https://twitter.com/trychroma)
 
 ***
 

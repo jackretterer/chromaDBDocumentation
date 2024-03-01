@@ -1,6 +1,8 @@
-# 🧬 Examples
+---
+title: 🎨 Examples ->
+---
 
-The following page has a list of examples of how to implement Chroma and what you can build with the product.
+This page provides a collection of examples demonstrating how to implement Chroma, along with various applications you can create using the product.
 
 <div class="special_table"></div>
 
