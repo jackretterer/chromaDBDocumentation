@@ -8,14 +8,12 @@ title: "🤝 About"
 ## Who we are
 
 :::tip We are hiring
-We are hiring software engineers and applied research scientists.
+We are hiring software engineers, researchers, designers and more-[here](https://trychroma.notion.site/careers-chroma-9d017c3007c7478ebd85bad854101497)
 :::
-
-[➡️ View open roles on Notion](https://www.notion.so/trychroma/careers-chroma-9d017c3007c7478ebd85bad854101497?pvs=4)
 
 Chroma as a project is coordinated by a small team of full-time employees who work at a company also called Chroma.
 
-We work in the sunny neighborhood of Potrero Hill in San Francisco.
+We work in the sunny neighborhood of Mission District in San Francisco.
 
 Chroma is co-founded by [Jeff Huber](https://twitter.com/jeffreyhuber) (left) and [Anton Troynikov](https://twitter.com/atroyn) (right).
 

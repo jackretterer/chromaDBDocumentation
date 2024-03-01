@@ -195,10 +195,18 @@ Now you can view the results to get an understanding of the return types.
 <TabItem value="py" label="Python">
 
 ```python
-results = collection.query(
-    query_texts=["This is a query document"],
-    n_results=2
-)
+print(results)
+
+# returned output example
+{
+  'ids': [['id1', 'id2']],
+  'distances': [[0.7111214399337769, 1.0109773874282837]],
+  'metadatas': [[None, None]],
+  'embeddings': None,
+  'documents': [['This is a document', 'This is another document']],
+  'uris': None,
+  'data': None
+}
 ```
 
 </TabItem>

@@ -3,7 +3,15 @@ sidebar_position: 1
 title: "📏 Telemetry"
 ---
 
-# 📏 Telemetry
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<div class="select-language">Select a language</div>
+
+<Tabs queryString groupId="lang">
+<TabItem value="py" label="Python"></TabItem>
+<TabItem value="js" label="JavaScript"></TabItem>
+</Tabs>
 
 Chroma contains a telemetry feature that collects **anonymous** usage information.
 

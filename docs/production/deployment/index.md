@@ -3,24 +3,12 @@ sidebar_position: 9
 title: "🚀 Deployment"
 ---
 
-:::caution Alpha Status
-Chroma Server is currently in Alpha. We are working hard to move Chroma from an in-memory single-process oriented library to a distributed production-grade DB!
-
-- [x] Alpha <- Currently
-- [ ] Technical Preview - ~1 month away, powered by a completely new backend
-- [ ] Full production
-- [ ] GA - General Availability
-
-:::
-
 # ☁️ Deployment
 
 You can also deploy Chroma on a long-running server, and connect to it
 remotely.
 
-There are many possible configurations, but for convenience we have
-provided a very simple AWS CloudFormation template to experiment with
-deploying Chroma to EC2 on AWS.
+We currently have runbooks for an AWS and GCP implementation. They are semi-supported however should offer a starting point.
 
 ## Hosted Chroma
 
