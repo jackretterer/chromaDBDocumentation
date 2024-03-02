@@ -76,7 +76,7 @@ chroma_client = chromadb.Client()
 Start the Chroma backend server:
 
 ```sh
-chroma run --path /db_path
+chroma run --path /db_path # Need to explain what db_path
 ```
 
 Then create a client which connects to it:
